@@ -1,0 +1,25 @@
+version: '3'
+services:
+  server:
+    build:
+      context: ../.
+      dockerfile: docker/server/Dockerfile.dev
+    image: pa-server
+    ports:
+      - '80:80'
+    networks:
+      - pa
+  app:
+    build:
+      context: ../.
+      dockerfile: docker/app/Dockerfile.dev
+    image: pa-app
+    volumes:
+      - ./../app:/usr/src/app
+    ports:
+      - '3000:3000'
+    networks:
+      - pa
+networks:
+  pa:
+    driver: "bridge"
