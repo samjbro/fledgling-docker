@@ -1,8 +1,3 @@
-var http = require('http');
-
-var server = http.createServer(function (request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("Hello World boiii");
-});
-
-server.listen(3000);
+require("file-loader?name=index.html!./index.html");
+var hello = document.getElementById("root");
+hello.innerHTML = "Yes mama!";
