@@ -1,4 +1,4 @@
 ./app/node_modules
 ./api/node_modules
-.idea/vcs.xml
 .idea/workspace.xml
+.idea/tasks.xml
