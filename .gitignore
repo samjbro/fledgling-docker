@@ -1,3 +1,4 @@
 ./app/node_modules
 ./api/node_modules
-.idea
+.idea/vcs.xml
+.idea/workspace.xml
