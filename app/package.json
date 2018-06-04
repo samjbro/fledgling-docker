@@ -3,15 +3,34 @@
   "description": "hello world",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
+  },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config --port 3000 --host=0.0.0.0 --display-error-details"
+    "lint": "eslint --ext .js,.vue src --fix",
+    "start": "webpack-dev-server --hot --inline --config build/webpack.config.dev.js --port 3000 --host=0.0.0.0"
   },
   "devDependencies": {
-    "babel-polyfill": "^6.26.0",
-    "express": "^4.16.3",
-    "file-loader": "^1.1.11",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.5.0",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.2",
+    "vue-loader": "^15.2.4",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16",
     "webpack": "^4.10.2",
     "webpack-cli": "^3.0.1",
     "webpack-dev-server": "^3.1.4"

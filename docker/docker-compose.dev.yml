@@ -11,11 +11,14 @@ services:
       - pa
   app:
     build:
-      context: ../.
-      dockerfile: docker/app/Dockerfile.dev
+      context: ../app
+      dockerfile: Dockerfile.dev
     image: pa-app
     volumes:
-      - ./../app:/usr/src/app
+      - ./../app/src:/usr/src/app/src
+      - ./../app/dist:/usr/src/app/dist
+      - ./../app/build:/usr/src/app/build
+      - ./../app/assets:/usr/src/app/assets
     ports:
       - '3000:3000'
     networks:
